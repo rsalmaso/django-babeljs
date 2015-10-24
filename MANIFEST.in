@@ -1,0 +1,5 @@
+include AUTHORS
+include COPYING
+include README.md
+graft babeljs
+global-exclude __pycache__ *.orig *.pyc *.log *.swp
