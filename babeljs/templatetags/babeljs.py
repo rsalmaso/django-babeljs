@@ -24,6 +24,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 from django import template
 from django.template import loader
 from django.utils.encoding import iri_to_uri
+from django.utils.safestring import mark_safe
 import babeljs
 from babeljs import conf as settings
 
@@ -45,7 +46,7 @@ MINIFIED = ".min" if settings.MINIFIED else ""
 
 @register.simple_tag(takes_context=True, name="babeljs")
 def tag_babeljs(context, version=settings.VERSION, minified=MINIFIED):
-    return """<script type="text/javascript" src="{babel}"></script>""".format(
+    return mark_safe("""<script type="text/javascript" src="{babel}"></script>""".format(
         babel=_static(iri_to_uri(
             "babeljs/{script}-{version}{minified}.js".format(
                 script="browser",
@@ -53,7 +54,7 @@ def tag_babeljs(context, version=settings.VERSION, minified=MINIFIED):
                 minified=minified,
             )
         )),
-    )
+    ))
 
 
 @register.simple_tag(takes_context=True, name="babel")
@@ -71,4 +72,4 @@ def babel(context, template_name):
     except (babeljs.TransformError, execjs.RuntimeError):
         tag, js = """<script type="text/babel">""", template
 
-    return "".join([tag, js, "</script>"])
+    return mark_safe("".join([tag, js, "</script>"]))
