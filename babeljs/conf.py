@@ -25,7 +25,7 @@ from os.path import abspath, dirname, join
 from django.conf import settings as djsettings
 
 
-VERSION = "5.8.26"
+VERSION = "5.8.32"
 BABELJS = getattr(djsettings, "BABELJS_BABEL", "browser-{}.min.js".format(VERSION))
 JS_ROOT = getattr(djsettings, "BABELJS_ROOT", abspath(join(dirname(__file__), "static/babeljs")))
 DEBUG = getattr(djsettings, "DEBUG")
