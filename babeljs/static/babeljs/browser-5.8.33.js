@@ -3614,7 +3614,7 @@ var Buffer = (function () {
 
   Buffer.prototype.rightBrace = function rightBrace() {
     this.newline(true);
-    if (this.format.compact) this._removeLast(";");
+    //if (this.format.compact) this._removeLast(";");
     this.push("}");
   };
 
@@ -61532,7 +61532,7 @@ resolve.relative = function (loc) {
 },{"1":1,"10":10}],603:[function(_dereq_,module,exports){
 module.exports={
   "name": "babel-core",
-  "version": "5.8.32",
+  "version": "5.8.33",
   "description": "A compiler for writing next generation JavaScript",
   "author": "Sebastian McKenzie <sebmck@gmail.com>",
   "homepage": "https://babeljs.io/",
