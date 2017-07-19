@@ -25,6 +25,10 @@ from django.apps import AppConfig
 from django.utils.translation import ugettext_lazy as _
 
 
-class Config(AppConfig):
+class BabelJSConfig(AppConfig):
     name = "babeljs"
     verbose_name = _("BabelJS")
+
+
+# compat
+Config = BabelJSConfig
