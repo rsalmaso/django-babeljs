@@ -7,7 +7,7 @@ import io
 import babeljs
 
 
-with io.open('README.md', "rU", encoding='utf-8') as fp:
+with io.open('README.md', "rt", encoding='utf-8') as fp:
     long_description = fp.read()
 
 
