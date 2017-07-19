@@ -63,8 +63,7 @@ def babel(context, template_name):
 
     template = loader.render_to_string(
         template_name=template_name,
-        dictionary={},
-        context_instance=context,
+        request=context['request'],
     )
 
     try:
