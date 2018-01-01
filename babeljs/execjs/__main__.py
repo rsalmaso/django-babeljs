@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2007-2017, Raffaele Salmaso <raffaele@salmaso.org>
+# Copyright (C) 2007-2018, Raffaele Salmaso <raffaele@salmaso.org>
 # Copyright (c) 2012 Omoto Kenji
 # Copyright (c) 2011 Sam Stephenson
 # Copyright (c) 2011 Josh Peek
